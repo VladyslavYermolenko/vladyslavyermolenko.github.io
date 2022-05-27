@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-size: 15px;
+    color: #c9d1c8 !important;
+    text-shadow: 10px 0 10px #000;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.link {
+    color: #5b7065; 
+    font-size: 15px;
+    text-decoration: none; /* Убрать подчёркивание ссылки */
+}
+
+.background {
+    background: linear-gradient(170deg, #04202C, #304040); /* Градиент фона */
+}
