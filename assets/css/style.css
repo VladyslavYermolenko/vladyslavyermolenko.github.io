@@ -1,20 +1,100 @@
+/*=============================================================================*/
+
 body {
-    margin: 0;
-    font-size: 15px;
-    color: #c9d1c8 !important;
-    text-shadow: 10px 0 10px #000;
+    /* Указываем ширину*/
+    width: 1900px;
+
+    /* Для настройки отступов тела сайта */
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    font-size: 20px; /* Дэфолтный размер текста */
+    color: #c9d1c8; /* Цвет обычного текста */
+    text-shadow: 0 0 10px #000; /* Тень текста */
+    
+    background: linear-gradient(170deg, #04202C, #304040); /* Градиент фона */
 }
 
-h1 {
+/*=============================================================================*/
+
+header {
+
+}
+
+main {
+    border-top: 2px solid;
+}
+
+footer {
+    text-align: center;
+    font-size: 15px;
+}
+
+/*=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+/*=============================================================================*/
+
+td {
+    padding: 15px;
+}
+
+/*=============================================================================*/
+
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Чтобы main не залезал на header */
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.left-item { /* Ровняем по горизонтали с левого края */
+    float: left;
+    text-align: center;
+}
+
+.menu-main a { /* Параметры для нашего текста */
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+
+  color: #c9d1c8; 
+  text-decoration: none; /* Убрать подчёркивание ссылки */
+}
+
+.menu-main a:hover { /* Когда наводим на него мышкой */
+    background: rgba(0,0,0,.3);
+}
+
+/*=============================================================================*/
+
+.table {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    
 }
 
 .link {
     color: #5b7065; 
-    font-size: 15px;
     text-decoration: none; /* Убрать подчёркивание ссылки */
 }
 
-.background {
-    background: linear-gradient(170deg, #04202C, #304040); /* Градиент фона */
-}
+/*=============================================================================*/
