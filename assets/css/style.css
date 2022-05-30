@@ -23,6 +23,10 @@ header, main, footer {
   max-width: 1800px;
 }
 
+hr {
+  color: white;
+}
+
 .header-main-footer {
   margin-left: auto;
   margin-right: auto;
@@ -70,11 +74,7 @@ article {
 header {
   margin-top: 100px;
   text-align: center;
-  border: 1px solid;
-}
-
-main {
-
+  border: 1px solid white;
 }
 
 footer {
@@ -91,12 +91,14 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Verdana', sans-serif;
 }
 
+.header-main-footer img {
+  border-radius: 10px;
+}
+
 a {
   color: #c9d1c8;
   text-decoration: none; /* Видаляємо підкреслення для силок */
 }
-
-/*********************************************************************/
 
 .menu-main {
   list-style: none; /* Видаляємо крапки збоку списку */
@@ -105,16 +107,16 @@ a {
 }
 
 /* Для ГЛАВНАЯ (і всі, що зліва лого) */
-.left-item {
+.menu-main .left {
   float: left;
 }
 
 /* Для GITHUB (і всі, що зправа лого) */
-.right-item {
+.menu-main .right {
   float: right;
 }
 
-.navbar-logo { /* Налаштування лого */
+.logo { /* Налаштування лого */
   position: absolute; /* Центруємо */
   /* Робимо посередині */
   left: 50%;
@@ -142,11 +144,9 @@ a {
   transition: background 1s;
 }
 
-.navbar-logo:hover { /* Налаштування лого при наведенні */
+.logo:hover { /* Налаштування лого при наведенні */
   padding-bottom: 5px;
 }
-
-/*********************************************************************/
 
 .main-img {
   margin-top: 10px;
@@ -156,6 +156,43 @@ a {
   float: left;
 }
 
+.row {
+  position: relative;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.row .absolute {
+  position: absolute;
+  margin: 0;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.container .left {
+  float: left;
+  width: 30%;
+}
+
+.container .center {
+  display: inline-block;
+  width: 30%;
+}
+
+.container .right {
+  float: right;
+  width: 30%;
+}
+
 .table-div {
   display: flex;
   flex-direction: column;
@@ -163,7 +200,7 @@ a {
 
 /*********************************************************************/
 
-@media (max-width: 700px) {
+@media (max-width: 700px) { /* Адаптація для телефонів (посля 700 до 401) */
   aside {
     display: none;
   }
@@ -183,7 +220,7 @@ a {
     text-align: center;
   }
 
-  .navbar-logo {
+  .logo {
     position: absolute;
     left: 50%;
     top: 10px;
