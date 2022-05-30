@@ -2,9 +2,7 @@ body {
   margin: 0;
   font-family: Helvetica, Verdana, 'Trebuchet MS', sans-serif;
   font-size: 18px;
-  /* color: rgb(0,0,0); */
   color: white;
-  /* background: rgb(241,244,248); */
   background: #304040; /* Градиент фона */
 }
 
@@ -31,17 +29,15 @@ hr {
 .header-main-footer {
   margin-left: auto;
   margin-right: auto;
+  text-align: justify;
 }
 
 aside {
   float: left;
+  margin-right: 20px;
   padding: 5px;
   padding-top: 70px;
   font-size: 15px;
-  /* color: rgb(241,244,248); */
-  
-  /* height: 3200px; */
-
   background: #04202C;
   border-right: 1px solid black;
 }
@@ -55,7 +51,6 @@ aside li {
 }
 
 aside a {
-  /* color: rgb(241,244,248); */
   line-height: 10px;
 }
 
@@ -65,6 +60,7 @@ aside a:hover {
 
 .main-div {
   display: flex;
+  margin-right: 25px;
 }
 
 article {
@@ -94,6 +90,10 @@ h1,h2,h3,h4,h5,h6 {
 
 .header-main-footer img {
   border-radius: 10px;
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 25px;
+  float: left;
 }
 
 a {
@@ -132,7 +132,6 @@ a {
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: bold;
-  /* color: rgb(241,244,248); */
   color: white;
 }
 
@@ -147,14 +146,6 @@ a {
 
 .logo:hover { /* Налаштування лого при наведенні */
   padding-bottom: 5px;
-}
-
-.main-img {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-left: 0px;
-  margin-right: 25px;
-  float: left;
 }
 
 .row {
@@ -196,6 +187,13 @@ a {
   flex-direction: column;
 }
 
+@media (max-width: 900px) { /* Адаптація для телефонів (посля 900 до 701) */
+  .header-main-footer .main-img {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 @media (max-width: 700px) { /* Адаптація для телефонів (посля 700 до 401) */
   aside {
     display: none;
@@ -204,23 +202,27 @@ a {
     max-width: 100%;
     height: auto;
   }
+  .main-div {
+    margin-right: 0;
+  }
   .header-main-footer {
-    max-width: 100%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (max-width: 400px) { /* Адаптація для телефонів (посля 400 до 251) */
+  .main-div {
+    margin-top: -20px;
+  }
+
   .menu-main {
-    padding-top: 90px;
     text-align: center;
   }
 
   .logo {
-    position: absolute;
-    left: 50%;
-    top: 10px;
-    transform: translateX(-50%);
+    display: none;
   }
 
   .menu-main li {
@@ -238,15 +240,9 @@ a {
     max-width: 100%;
     height: auto;
   }
-  .main-div {
-    padding-top: 60px;
-  }
 }
 
 @media (max-width: 250px) { /* Адаптація для телефонів (після 250) */
-  .main-div {
-    padding-top: 120px;
-  }
   .menu-main li {
     display: block;
   }
