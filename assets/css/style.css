@@ -5,7 +5,7 @@ body {
   /* color: rgb(0,0,0); */
   color: white;
   /* background: rgb(241,244,248); */
-  background: linear-gradient(170deg, #04202C, #304040); /* Градиент фона */
+  background: #304040; /* Градиент фона */
 }
 
 nav { /* Навігація */
@@ -23,6 +23,11 @@ header, main, footer {
   max-width: 1800px;
 }
 
+.header-main-footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 aside {
   float: left;
   padding: 5px;
@@ -30,6 +35,8 @@ aside {
   font-size: 15px;
   /* color: rgb(241,244,248); */
   
+  /* height: 3200px; */
+
   background: #04202C;
   border-right: 1px solid black;
 }
@@ -152,7 +159,6 @@ a {
 .table-div {
   display: flex;
   flex-direction: column;
-  margin: 30px;
 }
 
 /*********************************************************************/
@@ -161,13 +167,17 @@ a {
   aside {
     display: none;
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .header-main-footer {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 400px) { /* Адаптація для телефонів (посля 400 до 251) */
-  main {
-    margin-top: 160px;
-  }
-
   .menu-main {
     padding-top: 90px;
     text-align: center;
@@ -190,11 +200,19 @@ a {
     padding: 20px 15px;
     font-size: 16px;
   }
+
+  .table-div {
+    max-width: 100%;
+    height: auto;
+  }
+  .main-div {
+    padding-top: 60px;
+  }
 }
 
 @media (max-width: 250px) { /* Адаптація для телефонів (після 250) */
-  main {
-    margin-top: 220px;
+  .main-div {
+    padding-top: 120px;
   }
   .menu-main li {
     display: block;
