@@ -16,6 +16,7 @@ nav { /* Навігація */
   left: 0;
   background: #04202C;
   border-bottom: 1px solid black;
+  z-index: 1;
 }
 
 header, main, footer {
@@ -170,9 +171,6 @@ a {
   right: 0;
 }
 
-
-
-
 .container {
   width: 100%;
   text-align: center;
@@ -197,8 +195,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-
-/*********************************************************************/
 
 @media (max-width: 700px) { /* Адаптація для телефонів (посля 700 до 401) */
   aside {
